@@ -19,69 +19,65 @@ type Edge = {
 
 const nodes: Node[] = [
   // Central
-  { id: "metaphysics", label: "Metaphysics", category: "core", x: 400, y: 300, description: "The study of being as being — the most fundamental inquiry into the nature of reality." },
+  { id: "biology", label: "Human Biology", category: "core", x: 400, y: 300, description: "The study of the human body — its molecules, cells, organs, and systems. All life depends on organization, energy, and homeostasis." },
 
-  // Plato branch
-  { id: "plato", label: "Plato", category: "plato", x: 150, y: 150, description: "Developed the theory of Forms: reality is divided between the visible realm of appearances and the intelligible realm of perfect, eternal Forms." },
-  { id: "forms", label: "Theory of Forms", category: "plato", x: 60, y: 280, description: "The eternal, unchanging archetypes (eidos) of which physical things are imperfect copies. Accessible through reason, not the senses." },
-  { id: "divided-line", label: "Divided Line", category: "plato", x: 50, y: 180, description: "Four levels of reality: Eikasia (illusion) → Pistis (belief) → Dianoia (mathematical reasoning) → Noesis (pure intelligence)." },
-  { id: "cave", label: "Allegory of the Cave", category: "plato", x: 180, y: 50, description: "Illustrates the journey from ignorance (shadows) to enlightenment (the Good). Maps onto the Divided Line's four stages." },
-  { id: "participation", label: "Participation", category: "plato", x: 60, y: 380, description: "Physical things participate in the Forms — this is why they have the properties they do." },
+  // Homeostasis branch
+  { id: "homeostasis", label: "Homeostasis", category: "homeostasis", x: 150, y: 150, description: "The maintenance of a stable internal environment. Requires energy, negative feedback, and a hierarchy of organ systems. Homeostasis = life; equilibrium = death." },
+  { id: "negative-feedback", label: "Negative Feedback", category: "homeostasis", x: 60, y: 250, description: "The body senses a change and reacts AGAINST it to restore the set point. Example: hypothalamus detects temperature change → sweating or shivering." },
+  { id: "water", label: "Water & Life", category: "homeostasis", x: 60, y: 150, description: "Water's unique properties (solubility, heat capacity, polarity, reactivity) make it essential for nearly every biological process." },
+  { id: "characteristics", label: "Life Characteristics", category: "homeostasis", x: 180, y: 50, description: "Living things metabolize, reproduce, respond to stimuli, maintain homeostasis, evolve, and have complex organization. Organization and relationships are key." },
 
-  // Aristotle branch
-  { id: "aristotle", label: "Aristotle", category: "aristotle", x: 650, y: 150, description: "Rejected separated Forms. Developed hylomorphism, the categories, syllogistic logic, and the method of 'saving the appearances.'" },
-  { id: "syllogism", label: "Syllogistic Logic", category: "aristotle", x: 750, y: 60, description: "Deductive reasoning with two premises and a conclusion. Subject + Copula + Predicate. Valid forms include Barbara, Celarent, etc." },
-  { id: "categories", label: "Categories of Being", category: "aristotle", x: 770, y: 180, description: "10 categories: substance, quantity, quality, relation, place, time, position, state, action, passion." },
-  { id: "saving", label: "Saving the Appearances", category: "aristotle", x: 730, y: 280, description: "Aristotle's methodology: verify claims against common experience. Theories must account for what we actually observe." },
+  // Macromolecules branch
+  { id: "macromolecules", label: "Macromolecules", category: "macromolecules", x: 650, y: 150, description: "The 4 major macromolecules: carbohydrates, lipids, proteins, and nucleic acids. Each has distinct building blocks, structure, and functions." },
+  { id: "proteins", label: "Proteins", category: "macromolecules", x: 770, y: 60, description: "~20% of body. Made of 20 amino acid types (9 essential). Require 3D shape to function. Functions: structure (collagen), enzymes, transport (hemoglobin), immunity (antibodies)." },
+  { id: "lipids", label: "Lipids", category: "macromolecules", x: 770, y: 200, description: "15-30% of body. Insoluble in water. Types: triglycerides (energy storage, insulation), phospholipids (cell membrane), steroids (hormones). LDL vs HDL; atherosclerosis." },
+  { id: "carbs", label: "Carbohydrates", category: "macromolecules", x: 730, y: 310, description: "1-2% of body. Simple (glucose, lactose) and complex (starch, glycogen, cellulose). Glycogen is the body's sugar storage. Primary energy source." },
 
-  // Thomistic branch
-  { id: "thomism", label: "Thomism", category: "thomism", x: 400, y: 500, description: "St. Thomas Aquinas synthesized Aristotle with Christian theology. Emphasizes act/potency, form/matter, substance/accident." },
-  { id: "hylomorphism", label: "Form & Matter", category: "thomism", x: 220, y: 480, description: "All material beings are composed of substantial form (what it is) and prime matter (pure potentiality). Neither exists alone." },
-  { id: "act-potency", label: "Act & Potency", category: "thomism", x: 580, y: 480, description: "Act = what a thing actually is. Potency = what it can become. Explains change: the transition from potency to act." },
-  { id: "substance-accident", label: "Substance & Accident", category: "thomism", x: 400, y: 600, description: "Substance exists in itself. Accidents (color, size, etc.) exist in a substance. Connected to act/potency." },
-  { id: "transcendentals", label: "Transcendentals", category: "thomism", x: 230, y: 600, description: "Properties of every being: One, True, Good. Every being must be one (unified), true (intelligible), and good (desirable)." },
+  // Genetics branch
+  { id: "genetics", label: "Genetics", category: "genetics", x: 400, y: 500, description: "The science of genes, inheritance, and genetic variation. DNA stores the information to make proteins; genes are regions of DNA; alleles are gene variants." },
+  { id: "dna", label: "DNA & Genes", category: "genetics", x: 220, y: 480, description: "DNA: double-stranded, A-T and G-C base pairs, stored in chromosomes. Humans have 23 chromosome pairs, ~20,000 genes, 6 billion base pairs. 95% of DNA is non-coding." },
+  { id: "protein-synthesis", label: "Protein Synthesis", category: "genetics", x: 580, y: 480, description: "DNA → transcription → mRNA → translation (ribosomes) → protein. RNA is a temporary, portable copy of the gene used in the cytoplasm where protein is made." },
+  { id: "genetic-engineering", label: "Genetic Engineering", category: "genetics", x: 400, y: 620, description: "Recombinant DNA technology, gene therapy, and CRISPR/Cas9 allow manipulation of genes. Applications: insulin production, GMO crops, treating genetic diseases." },
+  { id: "inheritance", label: "Inheritance", category: "genetics", x: 220, y: 620, description: "Dominant and recessive alleles; genotype vs phenotype; single-gene traits (CF, hemophilia) vs polygenic traits (height, intelligence); chromosomal abnormalities (Down syndrome)." },
 
-  // Principles
-  { id: "pnc", label: "Non-Contradiction", category: "principles", x: 550, y: 370, description: "A thing cannot both be and not be in the same respect at the same time. Foundation of all metaphysics." },
-  { id: "intelligibility", label: "Intelligibility of Being", category: "principles", x: 250, y: 370, description: "All being is knowable by the intellect. Complementary to the innate human drive to know." },
-
-  // Concepts
-  { id: "analogy", label: "Analogous Concepts", category: "concepts", x: 600, y: 600, description: "Concepts applied in partly same, partly different senses. Essential for metaphysics — 'being' is said analogously of substance and accident." },
+  // Health branch
+  { id: "immune", label: "Immune System", category: "health", x: 550, y: 370, description: "Leukocytes defend the body. Non-specific (phagocytes, inflammation) and specific (B cells produce antibodies; T cells kill infected cells). Vaccines create memory cells." },
+  { id: "cancer", label: "Cancer & Cell Cycle", category: "health", x: 250, y: 370, description: "Cancer = unregulated cell division from damaged DNA. Oncogenes drive division; tumor suppressors (p53) detect damage and trigger apoptosis. Multiple mutations required." },
+  { id: "digestion", label: "Digestion", category: "health", x: 600, y: 620, description: "30-foot GI tract converts food into absorbable nutrients. Mechanical + chemical digestion in oral cavity, stomach; bile and enzymes in small intestine; bacteria in large intestine." },
 ];
 
 const edges: Edge[] = [
-  { from: "metaphysics", to: "plato", label: "founder" },
-  { from: "metaphysics", to: "aristotle", label: "systematizer" },
-  { from: "metaphysics", to: "thomism", label: "synthesis" },
-  { from: "plato", to: "divided-line" },
-  { from: "plato", to: "cave" },
-  { from: "plato", to: "forms" },
-  { from: "forms", to: "participation" },
-  { from: "divided-line", to: "cave", label: "maps to" },
-  { from: "aristotle", to: "syllogism" },
-  { from: "aristotle", to: "categories" },
-  { from: "aristotle", to: "saving" },
-  { from: "plato", to: "aristotle", label: "criticizes" },
-  { from: "aristotle", to: "thomism", label: "builds on" },
-  { from: "thomism", to: "hylomorphism" },
-  { from: "thomism", to: "act-potency" },
-  { from: "thomism", to: "substance-accident" },
-  { from: "thomism", to: "transcendentals" },
-  { from: "act-potency", to: "substance-accident", label: "grounds" },
-  { from: "metaphysics", to: "pnc", label: "built on" },
-  { from: "metaphysics", to: "intelligibility", label: "built on" },
-  { from: "hylomorphism", to: "transcendentals" },
-  { from: "thomism", to: "analogy" },
-  { from: "categories", to: "substance-accident", label: "primary" },
+  { from: "biology", to: "homeostasis", label: "core goal" },
+  { from: "biology", to: "macromolecules", label: "building blocks" },
+  { from: "biology", to: "genetics", label: "information" },
+  { from: "biology", to: "immune", label: "defense" },
+  { from: "biology", to: "cancer", label: "disease" },
+  { from: "homeostasis", to: "negative-feedback", label: "mechanism" },
+  { from: "homeostasis", to: "water", label: "depends on" },
+  { from: "homeostasis", to: "characteristics" },
+  { from: "macromolecules", to: "proteins" },
+  { from: "macromolecules", to: "lipids" },
+  { from: "macromolecules", to: "carbs" },
+  { from: "lipids", to: "immune", label: "cell membrane" },
+  { from: "proteins", to: "immune", label: "antibodies" },
+  { from: "genetics", to: "dna" },
+  { from: "genetics", to: "protein-synthesis" },
+  { from: "genetics", to: "genetic-engineering" },
+  { from: "genetics", to: "inheritance" },
+  { from: "dna", to: "protein-synthesis", label: "template for" },
+  { from: "protein-synthesis", to: "proteins", label: "makes" },
+  { from: "genetic-engineering", to: "cancer", label: "gene therapy" },
+  { from: "cancer", to: "protein-synthesis", label: "oncogenes" },
+  { from: "biology", to: "digestion", label: "fuels" },
+  { from: "digestion", to: "carbs", label: "provides" },
 ];
 
 const categoryColors: Record<string, string> = {
   core: "#7c6b9a",
-  plato: "#6b8fbf",
-  aristotle: "#bf8f6b",
-  thomism: "var(--success)",
-  principles: "#c4737a",
-  concepts: "#9a8a6b",
+  homeostasis: "#6b8fbf",
+  macromolecules: "#bf8f6b",
+  genetics: "var(--success)",
+  health: "#c4737a",
 };
 
 export default function MapPage() {

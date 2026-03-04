@@ -5,7 +5,7 @@ import { getEffectiveGlossary } from "@/lib/custom-glossary";
 import { getSRData, getTermStats } from "@/lib/spaced-repetition";
 import { getHistory } from "@/lib/study-history";
 
-const KEY = "meta-tutor-exam-date";
+const KEY = "bio-tutor-exam-date";
 
 export default function CountdownPage() {
   const glossary = getEffectiveGlossary();

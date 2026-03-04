@@ -123,7 +123,7 @@ const modes = [
   {
     id: "argument" as Mode,
     title: "Arguments",
-    description: "Reconstruct a philosopher's argument from the conclusion.",
+    description: "Reconstruct a scientific argument from the conclusion.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M9 12h6M9 16h6M13 4H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9l-7-5z" />

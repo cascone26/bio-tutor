@@ -8,7 +8,7 @@ export type ScheduleItem = {
   type: "nap" | "eat" | "study" | "class" | "quiz" | "custom";
 };
 
-const KEY = "meta-tutor-schedule";
+const KEY = "bio-tutor-schedule";
 
 const typeLabels: Record<string, string> = {
   nap: "Power Nap",

@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     const response = await anthropic.messages.create({
       model: "claude-sonnet-4-6",
       max_tokens: 512,
-      system: `You are Socrates, conducting a dialogue about the metaphysics concept "${term}" in the Thomistic/Aristotelian tradition.
+      system: `You are Socrates, conducting a dialogue about the Human Biology concept "${term}".
 
 CRITICAL RULES:
 - You may ONLY ask questions. NEVER explain, define, or give answers.

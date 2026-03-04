@@ -81,7 +81,7 @@ export default function ArgumentReconstruction({ onBack }: { onBack: () => void 
           <h1 className="text-xl font-semibold" style={{ color: "var(--foreground)" }}>Argument Reconstruction</h1>
         </div>
         <p className="text-sm mb-5" style={{ color: "var(--muted)" }}>
-          Given a philosopher&apos;s conclusion, reconstruct the argument&apos;s premises. The AI checks your logical structure.
+          Given a biological argument&apos;s conclusion, reconstruct its premises. The AI checks your logical structure.
         </p>
 
         {/* Argument selector */}

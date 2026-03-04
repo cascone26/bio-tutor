@@ -38,9 +38,9 @@ export default function DashboardPage() {
     setWeekTime(getWeekStudyTime());
 
     try {
-      const c = localStorage.getItem("meta-tutor-confidence");
+      const c = localStorage.getItem("bio-tutor-confidence");
       if (c) setConfidence(JSON.parse(c));
-      const p = localStorage.getItem("meta-tutor-practiced");
+      const p = localStorage.getItem("bio-tutor-practiced");
       if (p) setPracticed(new Set(JSON.parse(p)));
     } catch {}
 

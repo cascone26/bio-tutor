@@ -7,7 +7,7 @@ export type WrongAnswer = {
   modes: string[];
 };
 
-const KEY = "meta-tutor-wrong-answers";
+const KEY = "bio-tutor-wrong-answers";
 
 export function getWrongAnswers(): Record<string, WrongAnswer> {
   if (typeof window === "undefined") return {};

@@ -6,16 +6,16 @@ import { recordStudySession } from "@/lib/streaks";
 type Message = { role: "user" | "assistant"; content: string };
 
 const debateTopics = [
-  { id: 1, title: "Plato's Forms exist as a separate realm", side: "for", philosopher: "Plato" },
-  { id: 2, title: "Forms can only exist within material substances", side: "for", philosopher: "Aristotle" },
-  { id: 3, title: "Prime matter can exist independently of form", side: "for", philosopher: "Metaphysics" },
-  { id: 4, title: "The principle of non-contradiction is self-evident and cannot be proved", side: "for", philosopher: "Thomism" },
-  { id: 5, title: "Materialistic reductionism can fully explain reality", side: "for", philosopher: "Positions" },
-  { id: 6, title: "Radical monism — all plurality is illusion", side: "for", philosopher: "Positions" },
-  { id: 7, title: "Analogy is necessary for metaphysical concepts (univocity fails)", side: "for", philosopher: "Concepts" },
-  { id: 8, title: "Potency is a real principle, not merely a logical concept", side: "for", philosopher: "Thomism" },
-  { id: 9, title: "The human soul is the substantial form of the body", side: "for", philosopher: "Thomism" },
-  { id: 10, title: "Effect-to-cause reasoning is more valuable than cause-to-effect in metaphysics", side: "for", philosopher: "Aristotle" },
+  { id: 1, title: "Low-fat diets are the best approach for preventing cardiovascular disease", side: "for", philosopher: "Nutrition" },
+  { id: 2, title: "Genetically modified organisms (GMOs) are safe for human consumption", side: "for", philosopher: "Genetics" },
+  { id: 3, title: "CRISPR should be used to edit the human germline to prevent heritable diseases", side: "for", philosopher: "Bioethics" },
+  { id: 4, title: "Vaccines are safe and should be mandatory for public school attendance", side: "for", philosopher: "Immunology" },
+  { id: 5, title: "Designer babies — selecting for non-disease traits via genetic engineering — should be permitted", side: "for", philosopher: "Bioethics" },
+  { id: 6, title: "BMI is a reliable and sufficient measure of a person's health", side: "for", philosopher: "Nutrition" },
+  { id: 7, title: "Chemotherapy causes more harm than good in most cancer cases", side: "for", philosopher: "Cancer" },
+  { id: 8, title: "Modern science can fully explain the origin of life from chemistry alone", side: "for", philosopher: "Science" },
+  { id: 9, title: "Gene therapy should be used to treat polygenic disorders, not just single-gene defects", side: "for", philosopher: "Genetics" },
+  { id: 10, title: "The Atkins (low-carb) diet is superior to a balanced macronutrient diet for long-term health", side: "for", philosopher: "Nutrition" },
 ];
 
 export default function Debate({ onBack }: { onBack: () => void }) {

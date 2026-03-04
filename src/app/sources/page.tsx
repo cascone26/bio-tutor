@@ -36,21 +36,21 @@ export default function SourcesPage() {
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("meta-tutor-sources");
+      const saved = localStorage.getItem("bio-tutor-sources");
       if (saved) setSources(JSON.parse(saved));
-      const savedH = localStorage.getItem("meta-tutor-highlights");
+      const savedH = localStorage.getItem("bio-tutor-highlights");
       if (savedH) setHighlights(JSON.parse(savedH));
     } catch {}
   }, []);
 
   function saveSources(s: Source[]) {
     setSources(s);
-    localStorage.setItem("meta-tutor-sources", JSON.stringify(s));
+    localStorage.setItem("bio-tutor-sources", JSON.stringify(s));
   }
 
   function saveHighlights(h: Highlight[]) {
     setHighlights(h);
-    localStorage.setItem("meta-tutor-highlights", JSON.stringify(h));
+    localStorage.setItem("bio-tutor-highlights", JSON.stringify(h));
   }
 
   function addSource() {
@@ -329,7 +329,7 @@ export default function SourcesPage() {
           </div>
         </div>
         <p className="text-sm mb-4" style={{ color: "var(--muted)" }}>
-          Add primary texts (Summa Theologiae, Aristotle&apos;s Metaphysics, etc.). The tutor will quote directly from these instead of paraphrasing.
+          Add supplementary texts (textbook chapters, research articles, lecture notes, etc.). The tutor will reference these directly instead of paraphrasing.
         </p>
 
         {/* Search */}
@@ -353,7 +353,7 @@ export default function SourcesPage() {
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Title (e.g., Summa Theologiae I, Q.2)"
+                placeholder="Title (e.g., Chapter 5: The Immune System)"
                 className="rounded-lg px-3 py-2 text-sm outline-none"
                 style={{ background: "var(--background)", border: "1px solid var(--border)" }}
               />
@@ -361,7 +361,7 @@ export default function SourcesPage() {
                 type="text"
                 value={author}
                 onChange={(e) => setAuthor(e.target.value)}
-                placeholder="Author (e.g., Thomas Aquinas)"
+                placeholder="Author (e.g., Kuebler, Campbell Biology)"
                 className="rounded-lg px-3 py-2 text-sm outline-none"
                 style={{ background: "var(--background)", border: "1px solid var(--border)" }}
               />

@@ -14,15 +14,15 @@ function shuffle<T>(arr: T[]): T[] {
 
 export default function Flashcards({ onBack }: { onBack: () => void }) {
   const [category, setCategory] = useState<string | null>(() => {
-    try { const s = localStorage.getItem("meta-tutor-fc-progress"); return s ? JSON.parse(s).category ?? null : null; } catch { return null; }
+    try { const s = localStorage.getItem("bio-tutor-fc-progress"); return s ? JSON.parse(s).category ?? null : null; } catch { return null; }
   });
   const [shuffled, setShuffled] = useState<boolean>(() => {
-    try { const s = localStorage.getItem("meta-tutor-fc-progress"); return s ? JSON.parse(s).shuffled ?? true : true; } catch { return true; }
+    try { const s = localStorage.getItem("bio-tutor-fc-progress"); return s ? JSON.parse(s).shuffled ?? true : true; } catch { return true; }
   });
   const [cards, setCards] = useState(() => {
     const g = getEffectiveGlossary();
     try {
-      const s = localStorage.getItem("meta-tutor-fc-progress");
+      const s = localStorage.getItem("bio-tutor-fc-progress");
       if (s) {
         const p = JSON.parse(s);
         if (p.cardTerms?.length) {
@@ -35,19 +35,19 @@ export default function Flashcards({ onBack }: { onBack: () => void }) {
     return g;
   });
   const [index, setIndex] = useState<number>(() => {
-    try { const s = localStorage.getItem("meta-tutor-fc-progress"); return s ? JSON.parse(s).index ?? 0 : 0; } catch { return 0; }
+    try { const s = localStorage.getItem("bio-tutor-fc-progress"); return s ? JSON.parse(s).index ?? 0 : 0; } catch { return 0; }
   });
   const [flipped, setFlipped] = useState(false);
   const [known, setKnown] = useState<Set<string>>(() => {
-    try { const s = localStorage.getItem("meta-tutor-fc-progress"); return s ? new Set(JSON.parse(s).knownTerms ?? []) : new Set(); } catch { return new Set(); }
+    try { const s = localStorage.getItem("bio-tutor-fc-progress"); return s ? new Set(JSON.parse(s).knownTerms ?? []) : new Set(); } catch { return new Set(); }
   });
 
-  const restoredRef = useRef(typeof window !== "undefined" && !!localStorage.getItem("meta-tutor-fc-progress"));
+  const restoredRef = useRef(typeof window !== "undefined" && !!localStorage.getItem("bio-tutor-fc-progress"));
 
   // Save progress
   useEffect(() => {
     try {
-      localStorage.setItem("meta-tutor-fc-progress", JSON.stringify({
+      localStorage.setItem("bio-tutor-fc-progress", JSON.stringify({
         category,
         shuffled,
         cardTerms: cards.map((c: { term: string }) => c.term),
@@ -124,7 +124,7 @@ export default function Flashcards({ onBack }: { onBack: () => void }) {
         <p className="text-sm mb-4" style={{ color: "var(--muted)" }}>
           You marked all {known.size} terms as known.
         </p>
-        <button onClick={() => { setKnown(new Set()); reshuffleRemaining(); try { localStorage.removeItem("meta-tutor-fc-progress"); } catch {} }} className="text-sm px-4 py-2 rounded-full font-medium" style={{ background: "var(--accent)", color: "#fff" }}>
+        <button onClick={() => { setKnown(new Set()); reshuffleRemaining(); try { localStorage.removeItem("bio-tutor-fc-progress"); } catch {} }} className="text-sm px-4 py-2 rounded-full font-medium" style={{ background: "var(--accent)", color: "#fff" }}>
           Start over
         </button>
       </div>

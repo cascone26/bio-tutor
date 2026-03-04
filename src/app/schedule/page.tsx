@@ -48,7 +48,7 @@ export default function SchedulePage() {
       for (const item of schedule) {
         if (item.notify && item.days.includes(today) && item.time === currentTime) {
           if ("Notification" in window && Notification.permission === "granted") {
-            new Notification(`Meta Tutor — ${typeLabels[item.type]}`, {
+            new Notification(`Bio Tutor — ${typeLabels[item.type]}`, {
               body: item.title || typeLabels[item.type],
               icon: "/favicon.ico",
             });

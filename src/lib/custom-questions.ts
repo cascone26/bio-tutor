@@ -8,7 +8,7 @@ export type CustomQuestion = {
 export function getCustomQuestions(): CustomQuestion[] {
   if (typeof window === "undefined") return [];
   try {
-    const saved = localStorage.getItem("meta-tutor-custom-questions");
+    const saved = localStorage.getItem("bio-tutor-custom-questions");
     return saved ? JSON.parse(saved) : [];
   } catch {
     return [];
@@ -16,5 +16,5 @@ export function getCustomQuestions(): CustomQuestion[] {
 }
 
 export function saveCustomQuestions(questions: CustomQuestion[]) {
-  localStorage.setItem("meta-tutor-custom-questions", JSON.stringify(questions));
+  localStorage.setItem("bio-tutor-custom-questions", JSON.stringify(questions));
 }

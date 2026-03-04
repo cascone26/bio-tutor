@@ -40,7 +40,7 @@ export default function Match({ onBack }: { onBack: () => void }) {
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("meta-tutor-match-best");
+      const saved = localStorage.getItem("bio-tutor-match-best");
       if (saved) setBestTime(parseInt(saved));
     } catch {}
   }, []);
@@ -105,7 +105,7 @@ export default function Match({ onBack }: { onBack: () => void }) {
         if (timerRef.current) clearInterval(timerRef.current);
         if (!bestTime || time < bestTime) {
           setBestTime(time);
-          localStorage.setItem("meta-tutor-match-best", time.toString());
+          localStorage.setItem("bio-tutor-match-best", time.toString());
         }
       }
     } else {

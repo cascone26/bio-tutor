@@ -6,7 +6,7 @@ export default function ThemeToggle() {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("meta-tutor-theme");
+    const saved = localStorage.getItem("bio-tutor-theme");
     if (saved === "dark") {
       setDark(true);
       document.documentElement.classList.add("dark");
@@ -39,10 +39,10 @@ export default function ThemeToggle() {
     setDark(newDark);
     if (newDark) {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("meta-tutor-theme", "dark");
+      localStorage.setItem("bio-tutor-theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("meta-tutor-theme", "light");
+      localStorage.setItem("bio-tutor-theme", "light");
     }
   }
 

@@ -31,7 +31,7 @@ export default function EssayOutliner({ onBack }: { onBack: () => void }) {
     ];
     setAllQuestions(all);
     try {
-      const saved = localStorage.getItem("meta-tutor-outlines");
+      const saved = localStorage.getItem("bio-tutor-outlines");
       if (saved) setOutlines(JSON.parse(saved));
     } catch {}
   }, []);
@@ -64,7 +64,7 @@ export default function EssayOutliner({ onBack }: { onBack: () => void }) {
     const newOutlines = { ...outlines, [selectedQ]: updated };
     setOutline(updated);
     setOutlines(newOutlines);
-    localStorage.setItem("meta-tutor-outlines", JSON.stringify(newOutlines));
+    localStorage.setItem("bio-tutor-outlines", JSON.stringify(newOutlines));
   }
 
   function addSection() {

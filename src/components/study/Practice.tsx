@@ -26,8 +26,8 @@ export default function Practice({ onBack }: { onBack: () => void }) {
   // Load saved drafts on mount only
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("meta-tutor-drafts");
-      const savedPracticed = localStorage.getItem("meta-tutor-practiced");
+      const saved = localStorage.getItem("bio-tutor-drafts");
+      const savedPracticed = localStorage.getItem("bio-tutor-practiced");
       const parsedDrafts = saved ? JSON.parse(saved) : {};
       if (saved) setDrafts(parsedDrafts);
       if (savedPracticed) setPracticed(new Set(JSON.parse(savedPracticed)));
@@ -45,7 +45,7 @@ export default function Practice({ onBack }: { onBack: () => void }) {
     // Load draft for this question from current drafts state
     setAnswer((prev) => {
       try {
-        const saved = localStorage.getItem("meta-tutor-drafts");
+        const saved = localStorage.getItem("bio-tutor-drafts");
         const parsed = saved ? JSON.parse(saved) : {};
         return parsed[questions[currentQ].id]?.answer ?? "";
       } catch { return prev; }
@@ -63,14 +63,14 @@ export default function Practice({ onBack }: { onBack: () => void }) {
       },
     };
     setDrafts(newDrafts);
-    localStorage.setItem("meta-tutor-drafts", JSON.stringify(newDrafts));
+    localStorage.setItem("bio-tutor-drafts", JSON.stringify(newDrafts));
   }
 
   function markPracticed() {
     const next = new Set(practiced);
     next.add(question.id);
     setPracticed(next);
-    localStorage.setItem("meta-tutor-practiced", JSON.stringify([...next]));
+    localStorage.setItem("bio-tutor-practiced", JSON.stringify([...next]));
   }
 
   function toggleCheck(i: number) {
@@ -92,7 +92,7 @@ export default function Practice({ onBack }: { onBack: () => void }) {
     setLoadingFeedback(true);
     setAiFeedback("");
 
-    const prompt = `You are grading a student's essay answer for a Thomistic Metaphysics course.
+    const prompt = `You are grading a student's essay answer for a Human Biology course.
 
 QUESTION:
 ${question.text}

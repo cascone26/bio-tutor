@@ -13,127 +13,129 @@ type Connection = {
 
 const connections: Connection[] = [
   {
-    concept: "Hylomorphism",
-    category: "Thomism",
-    doctrine: "Transubstantiation (the Eucharist)",
-    scripture: "Matthew 26:26",
-    ccc: "CCC 1376",
+    concept: "Homeostasis and Divine Providence",
+    category: "Homeostasis",
+    doctrine: "Divine Providence and the Ordering of Creation",
+    scripture: "Wisdom 8:1",
+    ccc: "CCC 302-308",
     explanation:
-      "Transubstantiation is only intelligible through hylomorphism. In the Eucharist, the accidents (appearance, taste, smell) of bread and wine remain, but the substance is truly changed into the Body and Blood of Christ. Without the form/matter distinction, this doctrine cannot be coherently stated — it would collapse into either a merely symbolic presence or a crude physical replacement.",
+      "The body's homeostatic systems illustrate a profound truth about ordered creation: each level exists to serve those above it. Cells for organs, organs for organ systems, organ systems for the whole person. This hierarchy mirrors Catholic teaching on Divine Providence, which holds that God governs all creation according to a wise plan in which lower causes serve higher ends. The body does not govern itself by chaos but by order built into it by its Creator.",
   },
   {
-    concept: "Act and Potency",
-    category: "Thomism",
-    doctrine: "God as Pure Act (Actus Purus)",
-    scripture: "Exodus 3:14",
-    ccc: "CCC 202",
-    explanation:
-      "God reveals His name as 'I AM WHO AM' — He is existence itself, not a being that receives existence. In Thomistic terms, God is Pure Act: He has no potency, no unrealized capacity, no dependence on anything outside Himself. Every creature is a mixture of act and potency — it IS something, but it could be otherwise. God alone is wholly actual, and this is why He is the uncaused cause and why He cannot change or cease to be.",
-  },
-  {
-    concept: "Forms (Eidos)",
-    category: "Plato",
-    doctrine: "Divine Ideas in the Mind of God",
-    scripture: "John 1:3",
-    ccc: "CCC 295",
-    explanation:
-      "Plato held that the Forms are eternal, perfect archetypes that exist independently. Christian philosophy baptized this insight: the eternal archetypes exist not as a separate realm, but as ideas in the mind of God. 'All things were made through Him' (John 1:3) — creation follows the divine ideas. God knows what a dog is perfectly because He knows His own essence as imitable in that way. This grounding gives the Forms a personal home rather than an impersonal Platonic heaven.",
-  },
-  {
-    concept: "Transcendentals",
-    category: "Thomism",
-    doctrine: "The Beauty, Truth, and Goodness of God",
-    scripture: "Psalm 19:1",
-    ccc: "CCC 41",
-    explanation:
-      "Being, one, true, good, and beautiful are convertible — wherever there is being, there are these properties. God, as the fullness of being (ipsum esse subsistens), is therefore infinite truth, infinite goodness, and infinite beauty. Creation reflects these transcendentals imperfectly: 'The heavens declare the glory of God' (Ps 19:1). The natural human drive toward beauty, truth, and goodness is ultimately a drive toward God, whether or not the person recognizes it as such.",
-  },
-  {
-    concept: "Substance and Accident",
-    category: "Thomism",
-    doctrine: "The Human Person and the Soul",
+    concept: "Characteristics of Life and the Soul",
+    category: "Homeostasis",
+    doctrine: "The Human Soul as the Form of the Body",
     scripture: "Genesis 2:7",
-    ccc: "CCC 362–365",
+    ccc: "CCC 362-368",
     explanation:
-      "The human person is a substantial unity of body and soul — not a soul imprisoned in a body, but a single hylomorphic substance. The soul is the substantial form of the body. Death is the violent separation of these co-principles. The resurrection is the restoration of the full substance — not just the soul's continuation but the body's reunion with it. This grounds the Catholic insistence that bodily life, health, and the resurrection of the body are not peripheral but essential to human dignity.",
+      "Biology identifies life by its characteristics: metabolism, reproduction, response to stimuli, homeostasis, complex organization. The Church teaches that the soul is not merely an add-on to the body but its animating principle — what makes the body a living body rather than a corpse. The biological note that 'organization and relationships matter' resonates with the Catholic understanding that the soul is what organizes matter into a living, unified whole. Remove the soul, and the body immediately begins to lose its organization.",
   },
   {
-    concept: "Principle of Non-Contradiction",
-    category: "Thomism",
-    doctrine: "The Reliability of Divine Revelation",
-    scripture: "John 14:6",
-    ccc: "CCC 215",
+    concept: "Water's Unique Properties",
+    category: "Creation",
+    doctrine: "Creation as Gift and the Wisdom of the Creator",
+    scripture: "Psalm 104:10-11",
+    ccc: "CCC 295-301",
     explanation:
-      "God is truth itself ('I am the way, the truth, and the life') and cannot contradict Himself. The Principle of Non-Contradiction — that a thing cannot both be and not be — is not merely a human logical rule but is grounded in being itself, and God is the fullness of being. This is why divine revelation cannot contradict itself and why faith and reason cannot ultimately conflict: both have their origin in the God who is truth.",
+      "Water's extraordinary properties — its high heat capacity, solubility, reactivity, and wide liquid range — make it uniquely suited to support life. These properties appear precisely fine-tuned for biological existence. The Catholic tradition sees in the elegance and fitness of creation a reflection of the wisdom and generosity of God. That water, the most abundant molecule in the body, is precisely what biology requires speaks to the providential ordering of creation for life.",
   },
   {
-    concept: "Drive to Know / Intelligibility",
-    category: "Thomism",
-    doctrine: "Natural Knowledge of God",
-    scripture: "Romans 1:20",
-    ccc: "CCC 36",
+    concept: "The Human Body as Temple",
+    category: "Macromolecules",
+    doctrine: "The Body as Temple of the Holy Spirit",
+    scripture: "1 Corinthians 6:19-20",
+    ccc: "CCC 364-365",
     explanation:
-      "'Ever since the creation of the world His invisible nature... has been clearly perceived in the things that have been made' (Rom 1:20). The drive to know, which demands the intelligibility of being, naturally leads the mind from effect to cause — from the intelligible order of creation to its intelligent source. The Church teaches that God can be known with certainty by natural reason from created things. Metaphysics is the philosophical foundation of this natural theology.",
+      "The four major macromolecules work together in an integrated system of extraordinary complexity. No single molecule could sustain life; only their cooperation makes human life possible. The Church teaches that the body is a temple of the Holy Spirit (1 Cor 6:19), not to be degraded or despised. Understanding the biological intricacy of the human body — its molecular architecture, its constant self-maintenance, its capacity for repair — deepens reverence for the human person as a creature worthy of dignity and care.",
   },
   {
-    concept: "Participation",
-    category: "Plato / Thomism",
-    doctrine: "Creation as Participation in God's Being",
-    scripture: "Acts 17:28",
-    ccc: "CCC 294",
+    concept: "Temperance and Body Stewardship",
+    category: "Macromolecules",
+    doctrine: "Temperance and Care for the Body",
+    scripture: "1 Corinthians 9:27",
+    ccc: "CCC 2288-2291",
     explanation:
-      "'In Him we live and move and have our being' (Acts 17:28). Aquinas developed the Platonic notion of participation: creatures do not have existence of themselves but receive it from God, who alone IS existence. Every creature participates in being — it has existence as a gift, not as a possession. This is the deepest meaning of creation: not that God made things and stepped back, but that creatures are continually sustained in being by participation in God's act of being.",
+      "The body's fat systems are elegant: essential fat sustains life and hormonal function; storage fat provides long-term energy reserves. Both excess and deficiency cause harm. This biological reality supports the virtue of temperance. The Church teaches that we are stewards, not owners, of our bodies. Over-indulgence leading to obesity and under-indulgence that destroys health both violate the proper care owed to the body as God's gift. Biological knowledge reinforces the moral wisdom of moderation.",
   },
   {
-    concept: "Prime Matter / Individuation",
-    category: "Thomism",
-    doctrine: "The Uniqueness of Each Human Person",
+    concept: "DNA and Human Dignity from Conception",
+    category: "Genetics",
+    doctrine: "The Dignity of the Human Person from Conception",
+    scripture: "Psalm 139:13-14",
+    ccc: "CCC 2270-2275",
+    explanation:
+      "The human genome — containing roughly 6 billion base pairs encoding the complete biological information for a unique human being — is present in its entirety from the moment of fertilization. This biological fact supports the Church's teaching that human life, with its inherent dignity, begins at conception. The genetic uniqueness of every person (determined by the combination of parental alleles) reflects that each human being is unrepeatable — a truth that grounds Catholic opposition to abortion, cloning, and embryo destruction.",
+  },
+  {
+    concept: "Genetic Engineering Ethics",
+    category: "Genetics",
+    doctrine: "The Ethics of Intervening in Human Life",
     scripture: "Jeremiah 1:5",
-    ccc: "CCC 357",
+    ccc: "CCC 2292-2296",
     explanation:
-      "'Before I formed you in the womb I knew you' (Jer 1:5). Prime matter as the principle of individuation explains why Socrates and Plato, though both human, are distinct persons — each has their own matter. Applied theologically: each human person is a unique individual, known personally by God before creation. The immaterial intellect and will further distinguish persons, and angels — purely immaterial — are each their own species. God's personal love is directed to each unique individual, not just to human nature in the abstract.",
+      "CRISPR and gene therapy offer extraordinary potential to heal genetic diseases — a morally laudable goal aligned with the Church's vision of medicine as a service to human life. However, the same technologies could be used for enhancement (designer babies) or the destruction of embryos. The Church insists that interventions on the human genome are morally permissible only if they are therapeutic, respect the dignity of the person, do not impose disproportionate risks, and do not treat future persons as means rather than ends.",
   },
   {
-    concept: "Cause to Effect / Effect to Cause",
-    category: "Aristotle",
-    doctrine: "The Five Ways (Proofs for God's Existence)",
-    scripture: "Wisdom 13:1–5",
-    ccc: "CCC 31–32",
+    concept: "Vaccine Ethics and Cooperation",
+    category: "Genetics",
+    doctrine: "Cooperation with Evil and Proportionality",
+    scripture: "Romans 3:8",
+    ccc: "CCC 2263-2265",
     explanation:
-      "Aquinas's Five Ways are precisely arguments from effect to cause: from motion to an Unmoved Mover, from caused things to an Uncaused Cause, from contingent beings to a Necessary Being, from degrees of perfection to the Maximum, and from order in nature to an Intelligent Designer. Aristotle showed that reasoning from effect to cause is of special value in metaphysics because we encounter effects before their causes. The Five Ways apply this method to demonstrate God's existence from observable features of the world.",
+      "Some vaccines are grown in cell lines derived from aborted fetuses. The Church has addressed this directly: such vaccines may be used when (1) the disease poses a grave risk, (2) no alternatives are available, and (3) the person registers their objection and advocates for ethical alternatives. This reflects the Church's nuanced teaching on remote material cooperation with evil: using the fruit of a past evil act (without endorsing it) can be permissible when proportionate good results and all reasonable moral alternatives are pursued.",
   },
   {
-    concept: "Being as Being",
-    category: "Aristotle",
-    doctrine: "Theology as the Queen of Sciences",
-    scripture: "Colossians 2:3",
-    ccc: "CCC 159",
+    concept: "Apoptosis and Redemptive Sacrifice",
+    category: "Cancer",
+    doctrine: "Redemptive Suffering and the Logic of Sacrifice",
+    scripture: "John 12:24",
+    ccc: "CCC 1505-1508",
     explanation:
-      "Metaphysics studies being as being — the most universal and foundational science. Theology studies being as divinely revealed — it presupposes and perfects metaphysics. 'In Him are hidden all the treasures of wisdom and knowledge' (Col 2:3). Faith does not destroy reason but elevates it. The medievals called theology the Queen of Sciences not because it ignores reason, but because it takes the truths reason has discovered and illuminates them with the light of revelation, including truths reason could never reach on its own (the Trinity, the Incarnation).",
+      "Apoptosis — programmed cell death — is not a biological failure but a mechanism of order. When a cell is irreparably damaged, it kills itself for the good of the whole organism. This biological self-sacrifice mirrors a deep truth the Church has always taught: the good of the whole sometimes requires the death of a part, and this death is not meaningless but redemptive. Even at the cellular level, creation bears the imprint of the sacrificial logic that reaches its height in the Cross.",
   },
   {
-    concept: "Allegory of the Cave",
-    category: "Plato",
-    doctrine: "Conversion and Enlightenment by Grace",
-    scripture: "John 8:12",
-    ccc: "CCC 1697",
+    concept: "Immune System and the Common Good",
+    category: "Immunology",
+    doctrine: "Solidarity, Vaccination, and the Common Good",
+    scripture: "Romans 15:1-2",
+    ccc: "CCC 1905-1912",
     explanation:
-      "'I am the light of the world. Whoever follows me will not walk in darkness, but will have the light of life' (John 8:12). The freed prisoner who ascends from the cave to the light of the sun prefigures the soul's journey from ignorance to truth. In the Christian reading, the Sun is Christ — the light that makes all things visible and the Form of the Good now personally encountered. Conversion (metanoia) is the turning of the whole person from shadows to light, from sin to truth. Grace is what enables the turn that the soul cannot make by its own power alone.",
+      "The immune system operates according to a principle of solidarity: individual cells sacrifice themselves (B and T cells die after mounting a response) so that the organism survives. The Church's social teaching applies this principle to public health: vaccination is not merely a private medical decision but an act of charity toward the community. Herd immunity protects those who cannot be vaccinated — the sick, the immunocompromised, the elderly. Vaccine refusal can fail the duty of solidarity and care for the common good.",
+  },
+  {
+    concept: "Auto-Immune Disease and Original Sin",
+    category: "Immunology",
+    doctrine: "Original Sin and the Disorder Within",
+    scripture: "Romans 7:23",
+    ccc: "CCC 396-409",
+    explanation:
+      "In auto-immune disease, the body's own defense system turns against itself — what was made to protect becomes the source of destruction. This is a striking biological image of what sin does to the human person. Original sin introduces a disorder within human nature: reason rebels against God, the passions rebel against reason. Just as auto-immunity distorts the immune system's purpose (defense → attack), sin distorts the soul's proper ordering. The remedy for both requires an external agent — immunosuppressants for auto-immunity; grace for sin.",
+  },
+  {
+    concept: "Negative Feedback and Moral Conscience",
+    category: "Homeostasis",
+    doctrine: "Conscience as the Proximate Norm of Morality",
+    scripture: "Romans 2:15",
+    ccc: "CCC 1776-1802",
+    explanation:
+      "Negative feedback is the body's mechanism for detecting deviation from its proper state and correcting it. The moral conscience plays an analogous role in the spiritual life: it detects when a person deviates from right action and generates a corrective impulse (guilt, remorse, the call to repentance). Just as homeostasis requires a set point to return to, conscience requires a moral standard — an objective truth against which actions are measured. For Catholics, that standard is natural law written on the heart and clarified by divine revelation.",
   },
 ];
 
 const categoryColors: Record<string, { bg: string; text: string }> = {
-  Thomism: { bg: "var(--accent-light)", text: "var(--accent)" },
-  Plato: { bg: "#e8f0fe", text: "#4a7ab5" },
-  "Plato / Thomism": { bg: "#f3e8fe", text: "#7a4ab5" },
-  Aristotle: { bg: "#e8f5e9", text: "#2d6a30" },
+  Homeostasis: { bg: "var(--accent-light)", text: "var(--accent)" },
+  Creation: { bg: "#e8f0fe", text: "#4a7ab5" },
+  Macromolecules: { bg: "#f3e8fe", text: "#7a4ab5" },
+  Genetics: { bg: "#e8f5e9", text: "#2d6a30" },
+  Cancer: { bg: "#fde8e8", text: "#b54a4a" },
+  Immunology: { bg: "#e8f5f0", text: "#2d6a56" },
 };
 
 export default function FaithPage() {
   const [expanded, setExpanded] = useState<number | null>(null);
   const [filter, setFilter] = useState<string>("All");
 
-  const categories = ["All", "Thomism", "Aristotle", "Plato", "Plato / Thomism"];
+  const categories = ["All", "Homeostasis", "Creation", "Macromolecules", "Genetics", "Cancer", "Immunology"];
   const filtered = filter === "All" ? connections : connections.filter((c) => c.category === filter);
 
   return (
@@ -142,10 +144,10 @@ export default function FaithPage() {
       <div className="px-4 pt-5 pb-3 shrink-0">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-xl font-semibold mb-1" style={{ color: "var(--foreground)" }}>
-            Philosophy &amp; Faith
+            Biology &amp; Faith
           </h1>
           <p className="text-sm mb-4" style={{ color: "var(--muted)" }}>
-            How the concepts of metaphysics connect to Catholic doctrine and Sacred Scripture.
+            How the concepts of Human Biology connect to Catholic doctrine and Sacred Scripture.
           </p>
 
           {/* Category filter */}

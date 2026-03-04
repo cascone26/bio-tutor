@@ -9,7 +9,7 @@ export type CustomGlossaryData = {
   deleted: string[]; // original term names to hide
 };
 
-const STORAGE_KEY = "meta-tutor-custom-glossary";
+const STORAGE_KEY = "bio-tutor-custom-glossary";
 
 function emptyData(): CustomGlossaryData {
   return { added: [], edited: {}, deleted: [] };

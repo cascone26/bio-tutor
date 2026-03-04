@@ -102,7 +102,7 @@ export default function CustomQuestions() {
             type="text"
             value={topics}
             onChange={(e) => setTopics(e.target.value)}
-            placeholder="Topics (comma-separated, e.g., Plato, Forms, Cave)"
+            placeholder="Topics (comma-separated, e.g., Homeostasis, Negative Feedback, Module 2)"
             className="w-full rounded-lg px-3 py-2 text-sm outline-none mb-3"
             style={{ background: "var(--background)", border: "1px solid var(--border)" }}
           />

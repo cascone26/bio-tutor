@@ -25,7 +25,7 @@ function ChatPage() {
   const [messages, setMessages] = useState<Message[]>(() => {
     if (typeof window === "undefined") return [];
     try {
-      const saved = localStorage.getItem("meta-tutor-chat");
+      const saved = localStorage.getItem("bio-tutor-chat");
       return saved ? JSON.parse(saved) : [];
     } catch { return []; }
   });
@@ -49,7 +49,7 @@ function ChatPage() {
   // Load confidence from localStorage
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("meta-tutor-confidence");
+      const saved = localStorage.getItem("bio-tutor-confidence");
       if (saved) setConfidence(JSON.parse(saved));
     } catch {}
   }, []);
@@ -62,14 +62,14 @@ function ChatPage() {
       } else {
         next[qId] = level;
       }
-      localStorage.setItem("meta-tutor-confidence", JSON.stringify(next));
+      localStorage.setItem("bio-tutor-confidence", JSON.stringify(next));
       return next;
     });
   }
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    try { localStorage.setItem("meta-tutor-chat", JSON.stringify(messages)); } catch {}
+    try { localStorage.setItem("bio-tutor-chat", JSON.stringify(messages)); } catch {}
   }, [messages]);
 
   useEffect(() => {
@@ -93,7 +93,7 @@ function ChatPage() {
       // Include user-added notes for context
       let userNotes: { title: string; content: string }[] = [];
       try {
-        const saved = localStorage.getItem("meta-tutor-user-notes");
+        const saved = localStorage.getItem("bio-tutor-user-notes");
         if (saved) {
           userNotes = JSON.parse(saved).map((n: { title: string; content: string }) => ({
             title: n.title,
@@ -105,7 +105,7 @@ function ChatPage() {
       // Include primary source texts
       let sources: { title: string; author: string; content: string }[] = [];
       try {
-        const savedSources = localStorage.getItem("meta-tutor-sources");
+        const savedSources = localStorage.getItem("bio-tutor-sources");
         if (savedSources) {
           sources = JSON.parse(savedSources).map((s: { title: string; author: string; content: string }) => ({
             title: s.title,
@@ -180,7 +180,7 @@ function ChatPage() {
 
   function clearChat() {
     setMessages([]);
-    try { localStorage.removeItem("meta-tutor-chat"); } catch {}
+    try { localStorage.removeItem("bio-tutor-chat"); } catch {}
   }
 
   return (
@@ -406,7 +406,7 @@ function ChatPage() {
                 </svg>
               </div>
               <h2 className="text-lg font-semibold mb-1" style={{ color: "var(--foreground)" }}>
-                Welcome to Meta Tutor
+                Welcome to Bio Tutor
               </h2>
               <p className="text-sm max-w-md mb-6" style={{ color: "var(--muted)" }}>
                 Pick a question from the sidebar or type your own. Toggle between
@@ -414,10 +414,10 @@ function ChatPage() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-lg">
                 {[
-                  "Explain the Divided Line in simple terms",
-                  "What's the difference between form and matter?",
-                  "Help me understand act and potency",
-                  "Quiz me on Aristotle's categories",
+                  "Explain homeostasis vs. equilibrium",
+                  "What's the difference between DNA, genes, and alleles?",
+                  "Help me understand how the immune system responds to pathogens",
+                  "Quiz me on the cell cycle and cancer",
                 ].map((prompt) => (
                   <button
                     key={prompt}
@@ -516,7 +516,7 @@ function ChatPage() {
               placeholder={
                 mode === "quiz"
                   ? "Pick a topic to get quizzed on..."
-                  : "Ask about any metaphysics topic..."
+                  : "Ask about any biology topic..."
               }
               rows={1}
               className="flex-1 resize-none rounded-xl px-4 py-3 text-sm outline-none"

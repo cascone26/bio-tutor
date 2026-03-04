@@ -12,7 +12,7 @@ export type QuizResult = {
 export function getHistory(): QuizResult[] {
   if (typeof window === "undefined") return [];
   try {
-    const saved = localStorage.getItem("meta-tutor-history");
+    const saved = localStorage.getItem("bio-tutor-history");
     return saved ? JSON.parse(saved) : [];
   } catch {
     return [];
@@ -24,7 +24,7 @@ export function saveResult(result: QuizResult) {
   history.unshift(result);
   // Keep last 100
   if (history.length > 100) history.length = 100;
-  localStorage.setItem("meta-tutor-history", JSON.stringify(history));
+  localStorage.setItem("bio-tutor-history", JSON.stringify(history));
 }
 
 export function getWeakAreas(): { terms: string[]; categories: string[] } {

@@ -10,7 +10,7 @@ export type SREntry = {
 export function getSRData(): Record<string, SREntry> {
   if (typeof window === "undefined") return {};
   try {
-    const saved = localStorage.getItem("meta-tutor-sr");
+    const saved = localStorage.getItem("bio-tutor-sr");
     return saved ? JSON.parse(saved) : {};
   } catch {
     return {};
@@ -18,7 +18,7 @@ export function getSRData(): Record<string, SREntry> {
 }
 
 export function saveSRData(data: Record<string, SREntry>) {
-  localStorage.setItem("meta-tutor-sr", JSON.stringify(data));
+  localStorage.setItem("bio-tutor-sr", JSON.stringify(data));
 }
 
 // Simplified SM-2 algorithm

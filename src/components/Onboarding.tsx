@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 const steps = [
   {
-    title: "Welcome to Meta Tutor",
-    description: "Your personal study assistant for Thomistic Metaphysics. Here's a quick tour of what you can do.",
+    title: "Welcome to Bio Tutor",
+    description: "Your personal study assistant for Human Biology. Here's a quick tour of what you can do.",
   },
   {
     title: "AI Chat",
@@ -33,7 +33,7 @@ const steps = [
   },
 ];
 
-const KEY = "meta-tutor-onboarding-done";
+const KEY = "bio-tutor-onboarding-done";
 
 export default function Onboarding() {
   const [show, setShow] = useState(false);

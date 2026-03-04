@@ -70,7 +70,7 @@ export default function Nav() {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("meta-tutor-theme");
+    const saved = localStorage.getItem("bio-tutor-theme");
     if (saved === "dark") {
       setDark(true);
       document.documentElement.classList.add("dark");
@@ -88,10 +88,10 @@ export default function Nav() {
     setDark(next);
     if (next) {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("meta-tutor-theme", "dark");
+      localStorage.setItem("bio-tutor-theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("meta-tutor-theme", "light");
+      localStorage.setItem("bio-tutor-theme", "light");
     }
   }
 
@@ -113,17 +113,17 @@ export default function Nav() {
   const [prayerOpen, setPrayerOpen] = useState(false);
 
   useEffect(() => {
-    const disabled = localStorage.getItem("meta-tutor-show-prayer") === "false";
-    const shownThisSession = sessionStorage.getItem("meta-tutor-prayer-shown");
+    const disabled = localStorage.getItem("bio-tutor-show-prayer") === "false";
+    const shownThisSession = sessionStorage.getItem("bio-tutor-prayer-shown");
     if (!disabled && !shownThisSession) {
       setPrayerOpen(true);
-      sessionStorage.setItem("meta-tutor-prayer-shown", "true");
+      sessionStorage.setItem("bio-tutor-prayer-shown", "true");
     }
   }, []);
 
   function dismissPrayer(permanent: boolean) {
     setPrayerOpen(false);
-    if (permanent) localStorage.setItem("meta-tutor-show-prayer", "false");
+    if (permanent) localStorage.setItem("bio-tutor-show-prayer", "false");
   }
 
   return (

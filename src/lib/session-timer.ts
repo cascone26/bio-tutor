@@ -3,8 +3,8 @@ export type SessionLog = {
   totalSeconds: number;
 };
 
-const KEY = "meta-tutor-session-timer";
-const LOG_KEY = "meta-tutor-session-log";
+const KEY = "bio-tutor-session-timer";
+const LOG_KEY = "bio-tutor-session-log";
 
 function today(): string {
   return new Date().toISOString().split("T")[0];

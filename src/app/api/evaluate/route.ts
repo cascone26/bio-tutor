@@ -10,13 +10,13 @@ export async function POST(req: NextRequest) {
     const response = await anthropic.messages.create({
       model: "claude-sonnet-4-6",
       max_tokens: 1024,
-      system: `You are evaluating a student's understanding of a metaphysics concept. The student was asked to explain a term in their own words WITHOUT seeing the definition first.
+      system: `You are evaluating a student's understanding of a Human Biology concept. The student was asked to explain a term in their own words WITHOUT seeing the definition first.
 
 You must respond with ONLY valid JSON (no markdown, no code fences) in this exact format:
 {"level":"surface|partial|deep","feedback":"2-3 sentence evaluation","strengths":["what they got right"],"missing":["what key points they missed"]}
 
 Evaluation criteria:
-- DEEP: Captures the essential meaning, shows understanding of how it fits into the broader framework, uses appropriate philosophical language
+- DEEP: Captures the essential meaning, shows understanding of how it fits into the broader biological framework, uses appropriate scientific language
 - PARTIAL: Gets the general idea but misses important nuances, or has minor inaccuracies
 - SURFACE: Only scratches the surface, has significant gaps, or contains misconceptions
 

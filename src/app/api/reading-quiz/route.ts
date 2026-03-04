@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     const response = await anthropic.messages.create({
       model: "claude-sonnet-4-6",
       max_tokens: 1024,
-      system: `You are generating reading comprehension questions for a metaphysics student. The questions should test whether the student actually read and understood the passage — NOT general knowledge.
+      system: `You are generating reading comprehension questions for a Human Biology student. The questions should test whether the student actually read and understood the passage — NOT general knowledge.
 
 Respond with ONLY valid JSON: {"questions":[{"question":"...","answer":"..."},{"question":"...","answer":"..."},{"question":"...","answer":"..."}]}
 

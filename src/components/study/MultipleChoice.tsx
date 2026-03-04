@@ -48,27 +48,27 @@ export default function MultipleChoice({ onBack }: { onBack: () => void }) {
   const categories = getEffectiveCategories();
 
   const [category, setCategory] = useState<string | null>(() => {
-    try { const s = localStorage.getItem("meta-tutor-mc-progress"); return s ? JSON.parse(s).category ?? null : null; } catch { return null; }
+    try { const s = localStorage.getItem("bio-tutor-mc-progress"); return s ? JSON.parse(s).category ?? null : null; } catch { return null; }
   });
   const [shuffled, setShuffled] = useState<boolean>(() => {
-    try { const s = localStorage.getItem("meta-tutor-mc-progress"); return s ? JSON.parse(s).shuffled ?? true : true; } catch { return true; }
+    try { const s = localStorage.getItem("bio-tutor-mc-progress"); return s ? JSON.parse(s).shuffled ?? true : true; } catch { return true; }
   });
   const [questions, setQuestions] = useState<Question[]>(() => {
-    try { const s = localStorage.getItem("meta-tutor-mc-progress"); return s ? JSON.parse(s).questions ?? [] : []; } catch { return []; }
+    try { const s = localStorage.getItem("bio-tutor-mc-progress"); return s ? JSON.parse(s).questions ?? [] : []; } catch { return []; }
   });
   const [index, setIndex] = useState<number>(() => {
-    try { const s = localStorage.getItem("meta-tutor-mc-progress"); return s ? JSON.parse(s).index ?? 0 : 0; } catch { return 0; }
+    try { const s = localStorage.getItem("bio-tutor-mc-progress"); return s ? JSON.parse(s).index ?? 0 : 0; } catch { return 0; }
   });
   const [selected, setSelected] = useState<string | null>(null);
   const [score, setScore] = useState<number>(() => {
-    try { const s = localStorage.getItem("meta-tutor-mc-progress"); return s ? JSON.parse(s).score ?? 0 : 0; } catch { return 0; }
+    try { const s = localStorage.getItem("bio-tutor-mc-progress"); return s ? JSON.parse(s).score ?? 0 : 0; } catch { return 0; }
   });
   const [answered, setAnswered] = useState<number>(() => {
-    try { const s = localStorage.getItem("meta-tutor-mc-progress"); return s ? JSON.parse(s).answered ?? 0 : 0; } catch { return 0; }
+    try { const s = localStorage.getItem("bio-tutor-mc-progress"); return s ? JSON.parse(s).answered ?? 0 : 0; } catch { return 0; }
   });
   const [showResult, setShowResult] = useState(false);
   const [wrongTerms, setWrongTerms] = useState<{ term: string; category: string }[]>(() => {
-    try { const s = localStorage.getItem("meta-tutor-mc-progress"); return s ? JSON.parse(s).wrongTerms ?? [] : []; } catch { return []; }
+    try { const s = localStorage.getItem("bio-tutor-mc-progress"); return s ? JSON.parse(s).wrongTerms ?? [] : []; } catch { return []; }
   });
   const savedRef = useRef(false);
 
@@ -76,12 +76,12 @@ export default function MultipleChoice({ onBack }: { onBack: () => void }) {
   useEffect(() => {
     if (questions.length === 0) return;
     try {
-      localStorage.setItem("meta-tutor-mc-progress", JSON.stringify({ category, shuffled, questions, index, score, answered, wrongTerms }));
+      localStorage.setItem("bio-tutor-mc-progress", JSON.stringify({ category, shuffled, questions, index, score, answered, wrongTerms }));
     } catch {}
   }, [category, shuffled, questions, index, score, answered, wrongTerms]);
 
   const startQuiz = useCallback((cat: string | null, sh: boolean = shuffled) => {
-    try { localStorage.removeItem("meta-tutor-mc-progress"); } catch {}
+    try { localStorage.removeItem("bio-tutor-mc-progress"); } catch {}
     setCategory(cat);
     setQuestions(generateQuestions(cat, sh));
     setIndex(0);

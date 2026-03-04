@@ -9,33 +9,33 @@ type QuizState = { questions: Question[]; current: number; input: string; reveal
 const builtInPassages = [
   {
     id: 1,
-    title: "Aristotle on Being as Being",
-    source: "Aristotle, Metaphysics IV.1",
-    text: "There is a science which investigates being as being and the attributes which belong to this in virtue of its own nature. Now this is not the same as any of the so-called special sciences; for none of these others treats universally of being as being. They cut off a part of being and investigate the attribute of this part; this is what the mathematical sciences for instance do. Now since we are seeking the first principles and the highest causes, clearly there must be some thing to which these belong in virtue of its own nature.",
+    title: "Homeostasis and Negative Feedback",
+    source: "Course Notes, Module 2",
+    text: "Homeostasis is a stable internal environment — this equals life and requires lots of energy. The body tries to maintain a stable internal environment to keep you alive. Equilibrium is a state in which reactions and forces are balanced and there is no net movement — this equals death. Negative feedback is the process by which the body senses a change and then reacts AGAINST the change. This is ESSENTIAL for maintaining homeostasis. In the case of temperature, a brain region called the hypothalamus detects the changes and then activates responses: temperature goes up, the body sweats and sends blood to the skin (vasodilation) to cool the body; temperature goes down, the body shivers and restricts blood from the skin (vasoconstriction) to conserve heat. Properties of maintaining homeostasis include: negative feedback, varying reaction time (from seconds to hours), hierarchy of control, and requirement of energy.",
   },
   {
     id: 2,
-    title: "Plato's Allegory of the Cave (excerpt)",
-    source: "Plato, Republic VII, 514a-515a",
-    text: "Behold! human beings living in an underground cave, which has a mouth open towards the light and reaching all along the cave; here they have been from their childhood, and have their legs and necks chained so that they cannot move, and can only see before them, being prevented by the chains from turning round their heads. Above and behind them a fire is blazing at a distance, and between the fire and the prisoners there is a raised way; and you will see, if you look, a low wall built along the way, like the screen which marionette players have in front of them, over which they show the puppets.",
+    title: "DNA, Genes, and Protein Synthesis",
+    source: "Course Notes, Module 5",
+    text: "DNA is a double-stranded molecule made of nucleotides (A, T, G, C) with base pairs A-T and G-C. The human genome consists of 6 billion pairs of nucleotides distributed into 23 pairs of chromosomes. Each chromosome contains a certain number of genes. A gene is a region of a chromosome that has the information needed to make a protein. There are roughly 20,000 genes total in the human genome, and 95% of DNA does not have genes on it. Proteins are made in the cytoplasm, but DNA is in the nucleus. An RNA molecule is used to bridge the gap. RNA is produced as a temporary copy of the information in a gene — made from DNA by transcription. The RNA then moves out of the nucleus to the cytoplasm, where it is used to make proteins by a process called translation. The RNA molecule is read and translated into a sequence of amino acids that make up the specific protein. The overall process is: DNA → Transcription → mRNA → Translation → Protein.",
   },
   {
     id: 3,
-    title: "Aquinas on Act and Potency",
-    source: "Thomas Aquinas, De Principiis Naturae",
-    text: "It should be noted that something can be, even though it is not, and something can be that already is. That which can be but is not, is said to be in potency; that which already is, is said to be in act. But being is twofold: namely the essential being of a thing, or substantial being, as for example to be a man; and this is being simply. The other is accidental being, as for example for a man to be white; and this is being in a certain respect.",
+    title: "How Cancer Develops",
+    source: "Course Notes, Module 7",
+    text: "Cancer cells seem to lose specialization and divide faster than normal differentiated cells. The cell cycle proceeds through G1 (normal function), S phase (DNA replication), G2 phase (prep to divide), and then the mitotic phase (actual division). Cells divide when nutrients are present, they are of sufficient size, and growth factors are present. Cells stop dividing when they are crowded, when nutrients or growth factors are lacking, or when DNA is damaged. A cell starts to multiply in an unregulated way when the cell cycle checkpoints are no longer functioning properly. Tumor suppressor genes detect damage to the cell and either fix the cell or cause the cell to kill itself (apoptosis). P53 is an example: this protein recognizes damaged DNA and then signals the cell to stop dividing, giving it time to fix the DNA. If the DNA is not repaired, p53 gets overactive and triggers apoptosis. In most tumors, the p53 gene is damaged, so this process does not work properly. A cell needs to have a number of mutations before it becomes cancerous — a single mutation will not cause cancer. These mutations must occur in specific genes called oncogenes.",
   },
   {
     id: 4,
-    title: "Aristotle on the Syllogism",
-    source: "Aristotle, Prior Analytics I.1",
-    text: "A syllogism is discourse in which, certain things being stated, something other than what is stated follows of necessity from their being so. I mean by the last phrase that they produce the consequence, and by this, that no further term is required from without in order to make the consequence necessary. I call that a perfect syllogism which needs nothing other than what has been stated to make plain what necessarily follows; a syllogism is imperfect if it needs either one or more propositions, which are indeed the necessary consequences of the terms set down, but have not been expressly stated as premises.",
+    title: "The Immune Response: B Cells and Vaccines",
+    source: "Course Notes, Module 8",
+    text: "A specific B cell's antibody binds to a foreign antigen. Because there are few copies of this specific B cell, it has to divide to make more copies of itself to fight the infection — a process that takes a couple of days to ramp up. Two resulting cell types are produced: plasma cells that produce tons of antibody and then die in a few days, and memory cells that stick around for years and are ready to clear the infection quickly the next time the person is exposed to this pathogen. Antibodies are secreted by B cells in response to a specific antigen. Bacteria and viruses that have antibody bound to them are phagocytosed much more efficiently, are unable to bind to cells or tissues in your body as effectively, and are recognized by complement proteins in the blood that create pores in bacteria and kill them. Vaccines work by exposing the body to a non-infectious, non-pathogenic version of the antigen. Types of vaccines include inactivated vaccines (pathogen killed by heat or irradiation) and attenuated vaccines (pathogen genetically modified to be unable to complete its life cycle).",
   },
   {
     id: 5,
-    title: "Aquinas on the Transcendentals",
-    source: "Thomas Aquinas, De Veritate, Q.1, A.1",
-    text: "The first thing that the intellect conceives as most known, and into which it resolves all its conceptions, is being. Consequently, all the other conceptions of the intellect are had by additions to being. But nothing can be added to being as though it were something not already included in being — in the way that a difference is added to a genus or an accident to a subject — for every reality is essentially a being. Something is said to be added to being inasmuch as it expresses a mode of being not expressed by the term being itself.",
+    title: "Proteins: Structure and Function",
+    source: "Course Notes, Module 3",
+    text: "Proteins make up about 20% of the body. Unlike carbohydrates and fats, proteins have significant amounts of nitrogen. Proteins are made of chains of amino acids. There are 20 different types of amino acids your body needs to make proteins; 9 of them your body cannot make and must come from the diet — these are called the essential amino acids. Proteins have diverse functions, and the function depends upon them folding correctly. Proteins require a specific 3D shape to function. Depending on the sequence of amino acids that the protein is composed of, it will fold into a specific structure. If the protein unfolds (denatures), it will not work. Proteins unfold or denature if you heat them, put them in acid, or put them in high salt. Proteins have the most diverse array of functions compared to any of the other macromolecules in the body, including: structure (collagen — the most abundant protein), catalysis (enzymes that speed up reactions), transport and movement (hemoglobin, muscle proteins, membrane proteins), and recognition and protection (antibodies, clotting proteins).",
   },
 ];
 

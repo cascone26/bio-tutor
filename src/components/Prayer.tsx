@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const KEY = "meta-tutor-show-prayer";
+const KEY = "bio-tutor-show-prayer";
 
 const prayer = `Creator of all things,
 true Source of light and wisdom,
@@ -41,7 +41,7 @@ export default function Prayer() {
       setEnabled(false);
       return;
     }
-    const shown = sessionStorage.getItem("meta-tutor-prayer-shown");
+    const shown = sessionStorage.getItem("bio-tutor-prayer-shown");
     if (!shown) {
       setShow(true);
     }
@@ -49,7 +49,7 @@ export default function Prayer() {
 
   function dismiss() {
     setShow(false);
-    sessionStorage.setItem("meta-tutor-prayer-shown", "true");
+    sessionStorage.setItem("bio-tutor-prayer-shown", "true");
   }
 
   function disablePrayer() {

@@ -32,14 +32,14 @@ export default function NotesPage() {
   // Load user notes from localStorage
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("meta-tutor-user-notes");
+      const saved = localStorage.getItem("bio-tutor-user-notes");
       if (saved) setUserNotes(JSON.parse(saved));
     } catch {}
   }, []);
 
   function saveUserNotes(notes: UserNote[]) {
     setUserNotes(notes);
-    localStorage.setItem("meta-tutor-user-notes", JSON.stringify(notes));
+    localStorage.setItem("bio-tutor-user-notes", JSON.stringify(notes));
   }
 
   function addNote() {

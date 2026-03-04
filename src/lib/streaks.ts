@@ -22,7 +22,7 @@ export type BadgeStats = {
   totalTerms: number;
 };
 
-const KEY = "meta-tutor-streaks";
+const KEY = "bio-tutor-streaks";
 
 function today(): string {
   return new Date().toISOString().split("T")[0];

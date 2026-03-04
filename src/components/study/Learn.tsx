@@ -92,7 +92,7 @@ export default function Learn({ onBack }: { onBack: () => void }) {
 
   const [settings, setSettings] = useState<Settings>(() => {
     try {
-      const s = localStorage.getItem("meta-tutor-learn-settings");
+      const s = localStorage.getItem("bio-tutor-learn-settings");
       return s ? JSON.parse(s) : defaultSettings;
     } catch {
       return defaultSettings;
@@ -133,7 +133,7 @@ export default function Learn({ onBack }: { onBack: () => void }) {
   function saveSettings(s: Settings) {
     setSettings(s);
     try {
-      localStorage.setItem("meta-tutor-learn-settings", JSON.stringify(s));
+      localStorage.setItem("bio-tutor-learn-settings", JSON.stringify(s));
     } catch {}
   }
 
