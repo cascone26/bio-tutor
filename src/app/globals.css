@@ -3,14 +3,14 @@
 :root {
   --background: #f8f7f4;
   --foreground: #2d2d2d;
-  --accent: #7c6b9a;
-  --accent-hover: #6b5a89;
-  --accent-light: #f0ecf5;
+  --accent: #3a8f5e;
+  --accent-hover: #2e7a4e;
+  --accent-light: #eaf5ef;
   --surface: #ffffff;
   --surface-hover: #f3f1ee;
   --border: #e8e4df;
   --muted: #8a8580;
-  --user-bubble: #7c6b9a;
+  --user-bubble: #3a8f5e;
   --assistant-bubble: #f3f1ee;
   --prayer: #b8963a;
   --prayer-bg: #fdfaf4;
@@ -22,14 +22,14 @@
 html.dark {
   --background: #1a1a1e;
   --foreground: #e4e2de;
-  --accent: #a594c0;
-  --accent-hover: #b8a8d4;
-  --accent-light: #2a2640;
+  --accent: #4db37a;
+  --accent-hover: #5ec98a;
+  --accent-light: #1a2e24;
   --surface: #242428;
   --surface-hover: #2e2e34;
   --border: #3a3a40;
   --muted: #8a8580;
-  --user-bubble: #7c6b9a;
+  --user-bubble: #3a8f5e;
   --assistant-bubble: #2a2a30;
   --prayer: #c9a84c;
   --prayer-bg: #1e1c16;
