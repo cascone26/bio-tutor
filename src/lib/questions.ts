@@ -100,46 +100,46 @@ export const questions = [
     text: "How is CRISPR used to genetically modify humans? What are the scientific issues associated with doing this?",
     topics: ["CRISPR", "Genetic Engineering", "Module 6"],
   },
-  // Module 7: Cancer
-  {
-    id: 20,
-    text: "What is cancer and how do cells become cancerous?",
-    topics: ["Cancer", "Cell Division", "Module 7"],
-  },
-  {
-    id: 21,
-    text: "What is metastasis and why is this a problem for the body?",
-    topics: ["Cancer", "Metastasis", "Module 7"],
-  },
-  {
-    id: 22,
-    text: "What are the treatments for cancer and what are their limitations?",
-    topics: ["Cancer Treatments", "Chemotherapy", "Module 7"],
-  },
-  {
-    id: 23,
-    text: "How does the body prevent defective cells from becoming cancerous?",
-    topics: ["Cancer", "Cell Cycle", "Tumor Suppressor Genes", "Module 7"],
-  },
   // Module 8: Immune System
   {
-    id: 24,
+    id: 20,
     text: "What is the difference between the non-specific and specific immune responses?",
     topics: ["Immune Response", "Module 8"],
   },
   {
-    id: 25,
+    id: 21,
     text: "What do B and T cells do in the immune response?",
     topics: ["Immune Cells", "B Cells", "T Cells", "Module 8"],
   },
   {
-    id: 26,
+    id: 22,
     text: "How do antibodies work to fight infection?",
     topics: ["Antibodies", "Immune Response", "Module 8"],
   },
   {
-    id: 27,
+    id: 23,
     text: "What are autoimmune problems and what is thought to be the cause of these?",
     topics: ["Auto-Immune Disorders", "Immune System", "Module 8"],
+  },
+  // Module 7: Cancer
+  {
+    id: 24,
+    text: "What is cancer and how do cells become cancerous?",
+    topics: ["Cancer", "Cell Division", "Module 7"],
+  },
+  {
+    id: 25,
+    text: "What is metastasis and why is this a problem for the body?",
+    topics: ["Cancer", "Metastasis", "Module 7"],
+  },
+  {
+    id: 26,
+    text: "What are the treatments for cancer and what are their limitations?",
+    topics: ["Cancer Treatments", "Chemotherapy", "Module 7"],
+  },
+  {
+    id: 27,
+    text: "How does the body prevent defective cells from becoming cancerous?",
+    topics: ["Cancer", "Cell Cycle", "Tumor Suppressor Genes", "Module 7"],
   },
 ];
